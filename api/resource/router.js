@@ -9,6 +9,16 @@ resourceRouter.get("/", (req, res, next) => {
     res.status(200).json(resource)
   })
   .catch(next)
+});
+
+resourceRouter.post("/", (req, res, next) => {
+  const resource = req.body
+
+  Resource.add(resource)
+    .then(resource => {
+      res.status(201).json(resource)
+    })
+    .catch(next)
 })
 
 
