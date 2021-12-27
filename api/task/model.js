@@ -34,7 +34,7 @@ const add = async (task) => {
   const newTask = {
     task_description: task.task_description,
     task_notes: task.task_notes,
-    task_completed: Boolean(task.task_completed),
+    task_completed: Boolean(task.task_completed)
   }
   return newTask
 };
