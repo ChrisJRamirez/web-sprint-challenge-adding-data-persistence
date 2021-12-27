@@ -3,7 +3,6 @@ const db = require("../../data/dbConfig");
 
 const getProjects = () => {
   const projects = db("projects")
-
   return projects
 };
 
