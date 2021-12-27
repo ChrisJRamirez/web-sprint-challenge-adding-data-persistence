@@ -19,7 +19,7 @@ exports.up = async function(knex) {
     table.increments("task_id")
     table.string("task_description").notNullable()
     table.string("task_notes", 500)
-    table.integer("task_completed").defaultTo(0) // similar to project_completed above
+    table.integer("task_completed").defaultTo(0)
     table.integer("project_id")
       .unsigned()
       .notNullable()

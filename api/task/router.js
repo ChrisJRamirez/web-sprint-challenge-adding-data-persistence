@@ -15,8 +15,8 @@ taskRouter.post("/", (req, res, next) => {
   const task = req.body
 
   Task.add(task)
-    .then(task => {
-      res.status(201).json(task)
+    .then(newTask => {
+      res.status(201).json(newTask)
     })
     .catch(next)
 });
